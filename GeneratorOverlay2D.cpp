@@ -2,7 +2,7 @@
 #include <TTree.h>
 #include <TString.h>
 #include <TPad.h>
-
+ 
 using namespace std;
 
 #include <iostream>
@@ -191,7 +191,7 @@ void GeneratorOverlay2D() {
 	    
 
 	  } // End of the loop over the samples grabing the plots	
-	  PlotCanvas->SaveAs("myPlots/"+PlotNames[iPlot]+"_GeneratorOverlayNoNeutronCut.pdf");
+	  PlotCanvas->SaveAs("myPlots/"+PlotNames[iPlot]+"_GeneratorOverlayNeutronCut.pdf");
 
 	} // End of the loop over the plots
 	
@@ -262,7 +262,7 @@ void GeneratorOverlay2D() {
 	    
 	    
 	    PlotCanvas->cd();
-	    PlotCanvas->SaveAs("myPlots/"+PlotNames[iPlot]+"_GeneratorOverlayNoNeutronCut.pdf");
+	    PlotCanvas->SaveAs("myPlots/"+PlotNames[iPlot]+"_GeneratorOverlayNeutronCut.pdf");
 	 
 	  } // End of the loop over the samples grabing the plots	
 	} // End of the loop over the plots

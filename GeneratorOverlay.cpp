@@ -1,7 +1,7 @@
 #include <TFile.h>
 #include <TTree.h>
 #include <TString.h>
-
+ 
 using namespace std;
 
 #include <iostream>
@@ -64,45 +64,45 @@ void GeneratorOverlay() {
 	int NNeut = 6;
 	for (int neut =0; neut < NNeut; neut++){
 	  
-	  // PlotNames.push_back(Form("TrueMuonCosThetaPlot_Neutrons%d",neut) );
+	  PlotNames.push_back(Form("TrueMuonCosThetaPlot_Neutrons%d",neut) );
 	  
-	  // PlotNames.push_back(Form("TrueDeltaPtPlot_Neutrons%d",neut));
-	  // PlotNames.push_back(Form("MECTrueDeltaPtPlot_Neutrons%d",neut));
-	  // PlotNames.push_back(Form("QETrueDeltaPtPlot_Neutrons%d",neut));
-	  // PlotNames.push_back(Form("RESTrueDeltaPtPlot_Neutrons%d",neut));
-	  // PlotNames.push_back(Form("DISTrueDeltaPtPlot_Neutrons%d",neut));
-	  // PlotNames.push_back(Form("COHTrueDeltaPtPlot_Neutrons%d",neut));
+	  PlotNames.push_back(Form("TrueDeltaPtPlot_Neutrons%d",neut));
+	  PlotNames.push_back(Form("MECTrueDeltaPtPlot_Neutrons%d",neut));
+	  PlotNames.push_back(Form("QETrueDeltaPtPlot_Neutrons%d",neut));
+	  PlotNames.push_back(Form("RESTrueDeltaPtPlot_Neutrons%d",neut));
+	  PlotNames.push_back(Form("DISTrueDeltaPtPlot_Neutrons%d",neut));
+	  PlotNames.push_back(Form("COHTrueDeltaPtPlot_Neutrons%d",neut));
 	}
-	// PlotNames.push_back("TrueMuonCosThetaPlot");
+	PlotNames.push_back("TrueMuonCosThetaPlot");
 
-        // PlotNames.push_back("TrueDeltaPtPlotAllNeutrons");
-	//  PlotNames.push_back("QETrueDeltaPtPlotAllNeutrons");
-	//  PlotNames.push_back("MECTrueDeltaPtPlotAllNeutrons");
-	//  PlotNames.push_back("RESTrueDeltaPtPlotAllNeutrons");
-	//  PlotNames.push_back("DISTrueDeltaPtPlotAllNeutrons");
-	//  PlotNames.push_back("COHTrueDeltaPtPlotAllNeutrons");
+        PlotNames.push_back("TrueDeltaPtPlotAllNeutrons");
+	PlotNames.push_back("QETrueDeltaPtPlotAllNeutrons");
+	PlotNames.push_back("MECTrueDeltaPtPlotAllNeutrons");
+	PlotNames.push_back("RESTrueDeltaPtPlotAllNeutrons");
+	PlotNames.push_back("DISTrueDeltaPtPlotAllNeutrons");
+	PlotNames.push_back("COHTrueDeltaPtPlotAllNeutrons");
 
-	//  PlotNames.push_back("TrueNeutronMultiplicityPlot");
+	PlotNames.push_back("TrueNeutronMultiplicityPlot");
 	
-	//  PlotNames.push_back("QETrueNeutronMultiplicityPlot");	
-	//  PlotNames.push_back("MECTrueNeutronMultiplicityPlot");
-	//  PlotNames.push_back("RESTrueNeutronMultiplicityPlot");
-	//  PlotNames.push_back("DISTrueNeutronMultiplicityPlot");
-	//  PlotNames.push_back("COHTrueNeutronMultiplicityPlot");
-	
-
-	// PlotNames.push_back("QETruePMissingCosThetaPlot_Neutrons0");
-	// PlotNames.push_back("QETruePMissingCosThetaPlot_Neutrons1");
-	// PlotNames.push_back("QETruePMissingMagnitudePlot_Neutrons0");
-	// PlotNames.push_back("QETruePMissingMagnitudePlot_Neutrons1");
+	PlotNames.push_back("QETrueNeutronMultiplicityPlot");	
+	PlotNames.push_back("MECTrueNeutronMultiplicityPlot");
+	PlotNames.push_back("RESTrueNeutronMultiplicityPlot");
+	PlotNames.push_back("DISTrueNeutronMultiplicityPlot");
+	PlotNames.push_back("COHTrueNeutronMultiplicityPlot");
 	
 
+	PlotNames.push_back("QETruePMissingCosThetaPlot_Neutrons0");
+	PlotNames.push_back("QETruePMissingCosThetaPlot_Neutrons1");
+	PlotNames.push_back("QETruePMissingMagnitudePlot_Neutrons0");
+	PlotNames.push_back("QETruePMissingMagnitudePlot_Neutrons1");
 	
-	// PlotNames.push_back("TrueDeltaAlphaTPlot");
-	// PlotNames.push_back("QETrueDeltaAlphaTPlot");
-	// PlotNames.push_back("MECTrueDeltaAlphaTPlot");
-	// PlotNames.push_back("RESTrueDeltaAlphaTPlot");
-	// PlotNames.push_back("DISTrueDexltaAlphaTPlot");
+
+	
+	PlotNames.push_back("TrueDeltaAlphaTPlot");
+	PlotNames.push_back("QETrueDeltaAlphaTPlot");
+	PlotNames.push_back("MECTrueDeltaAlphaTPlot");
+	PlotNames.push_back("RESTrueDeltaAlphaTPlot");
+	PlotNames.push_back("DISTrueDexltaAlphaTPlot");
 
 	const int NPlots = PlotNames.size();
 
@@ -181,7 +181,7 @@ void GeneratorOverlay() {
 
 		PlotCanvas->cd();
 		leg->Draw();
-		PlotCanvas->SaveAs("myPlots/"+PlotNames[iPlot]+"_GeneratorOverlayNoNeutronCut.pdf");
+		PlotCanvas->SaveAs("myPlots/"+PlotNames[iPlot]+"_GeneratorOverlayNeutronCut.pdf");
 	} // End of the loop over the plots
 
 

@@ -1,6 +1,6 @@
 #define FlatTreeAnalyzer_cxx
 #include "FlatTreeAnalyzer.h"
-
+ 
 #include <TH1D.h>
 #include <TH2D.h>
 #include <TFile.h>
@@ -21,7 +21,7 @@ using namespace std;
 void Reweight(TH1D* h);
 
 
-
+//Aha
 void FlatTreeAnalyzer::Loop() {
 
 
@@ -216,7 +216,7 @@ void FlatTreeAnalyzer::Loop() {
 	  double deltaAlphaT = TMath::ACos(cosAlpha)*(180.0 /3.1415926); 
 
 	  // -- Missing momentum cut to reduce the number of neutrons in the final state -- //
-	  //if (pMissingMagnitude > 0.3 && pMissingDirection >-0.2){ continue; }
+	  if (pMissingMagnitude > 0.3 ){ continue; }
 	  
 
 
